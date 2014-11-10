@@ -1,5 +1,3 @@
-
-
 /**
  * @author Stephen
  */
@@ -16,13 +14,13 @@ public class StudentPoll {
          } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e);
             System.out.printf("   responsese[%d] = %d%n%n",
-            answer, responses[answer]);
+                    answer, responses[answer]);
          }
       }
-      
+
       System.out.printf("%s%10s%n", "Rating", "Frequency");
-      
-      for(int rating = 1; rating < freq.length; rating++) {
+
+      for (int rating = 1; rating < freq.length; rating++) {
          System.out.printf("%6d%10d%n", rating, freq[rating]);
       }
    }

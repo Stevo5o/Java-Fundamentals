@@ -1,9 +1,8 @@
-
-
-/** @author Stephen */
-
-
+/**
+ * @author Stephen
+ */
 import java.util.Scanner;
+
 public class LetterGrades1 {
 
    public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class LetterGrades1 {
               "On Windows type <Ctrl> z then press Enter");
 
       while (input.hasNextInt()) {
-         
+
          int grade = input.nextInt();
          total += grade;
          ++gradeCounter;
