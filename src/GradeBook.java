@@ -102,6 +102,7 @@ public class GradeBook {
 
       System.out.printf("The grades are:%n%n");
 
+      // output each student grade 
       for (int student = 0; student < grades.length; student++) {
          System.out.printf("Student %2d: %3d%n",
                  student + 1, grades[student]);

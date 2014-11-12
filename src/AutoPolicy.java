@@ -7,14 +7,11 @@ public class AutoPolicy {
    private String makeAndModel;
    private String state;
 
+   // constructor 
    public AutoPolicy(int accountNumber, String makeAndModel, String state) {
       this.accountNumber = accountNumber;
       this.makeAndModel = makeAndModel;
       this.state = state;
-   }
-
-   AutoPolicy() {
-      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
    }
 
    public void setAccountNumber(int accountNumber) {

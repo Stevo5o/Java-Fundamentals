@@ -12,14 +12,17 @@ public class Addition {
 
       int number1; // first number
       int number2; // second number
-      int sum; // Add first & second number
+      int sum; // sum of first & second number
 
+      
+      // Enter numbers 
       System.out.print("Enter first int: ");
       number1 = input.nextInt();
 
       System.out.print("Enter second int: ");
       number2 = input.nextInt();
 
+      // check numbers 
       if (number1 == number2) {
          System.out.printf("%d == %d%n", number1, number2);
       }
@@ -38,9 +41,11 @@ public class Addition {
       if (number1 >= number2) {
          System.out.printf("%d == %d%n", number1, number2);
       }
-      // sum = number1 + number2;
+      
+      // add number1 to number 2
+      sum = number1 + number2;
 
-      // System.out.printf("Sum is %d%n", sum);
+      System.out.printf("Sum is %d%n", sum);
 
    }
 
