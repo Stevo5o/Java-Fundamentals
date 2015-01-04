@@ -1,9 +1,14 @@
 package B01Advanced;
 
 /**
- * @author Stephen. 
- * Date class declaration
+ * @author Stephen. Date class declaration Composition A class can have
+ * references to objects of other classes as members Called composition and is
+ * sometimes referred to as a has-a relationship + e.g., a car has a steering
+ * wheel, has a break pedal and has an accelerator pedal. Java's form of composition is
+ * more formally called aggregation + Objects in Java are referenced by other
+ * objects, not completely contained in them as in C++
  */
+
 public class Date
 {
 
