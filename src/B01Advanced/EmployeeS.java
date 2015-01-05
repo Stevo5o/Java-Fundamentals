@@ -7,7 +7,7 @@ package B01Advanced;
 public class EmployeeS
 {
 
-   private static int count = 0;
+   private static int count = 0; // number of Employees created
    private String firstName; // reference type instance 
    private String lastName; // reference to an object
 
