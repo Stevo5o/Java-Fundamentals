@@ -5,11 +5,13 @@ import java.security.SecureRandom;
 /**
  * @author Stephen
  */
-public class Craps {
+public class Craps
+{
 
    private static final SecureRandom randomNumbers = new SecureRandom();
 
-   private enum Status {
+   private enum Status
+   {
 
       CONTINUE, WON, LOST
    };
@@ -20,14 +22,16 @@ public class Craps {
    private static final int YO_LEVEN = 11;
    private static final int BOX_CARS = 12;
 
-   public static void main(String[] args) {
+   public static void main(String[] args)
+   {
 
       int myPoint = 0; // point if no win or loss on first roll
       Status gameStatus; // can contain CONTINUE, WON or LOST
 
       int sumOfDice = rollDice(); // first roll dice
 
-      switch (sumOfDice) {
+      switch (sumOfDice)
+      {
 
          case SEVEN:
          case YO_LEVEN:
@@ -45,23 +49,29 @@ public class Craps {
             break;
       }
 
-      while (gameStatus == Status.CONTINUE) {
+      while (gameStatus == Status.CONTINUE)
+      {
          sumOfDice = rollDice();
 
-         if (sumOfDice == myPoint) {
+         if (sumOfDice == myPoint)
+         {
             gameStatus = Status.WON;
-         } else if (sumOfDice == SEVEN) {
+         } else if (sumOfDice == SEVEN)
+         {
             gameStatus = Status.LOST;
          }
       }
-         if (gameStatus == Status.WON) {
-            System.out.println("Player wins");
-         } else {
-            System.out.println("Player Loses");
-         }
-      }  
+      if (gameStatus == Status.WON)
+      {
+         System.out.println("Player wins");
+      } else
+      {
+         System.out.println("Player Loses");
+      }
+   }
 
-   public static int rollDice() {
+   public static int rollDice()
+   {
 
       int die1 = 1 + randomNumbers.nextInt(6);
       int die2 = 1 + randomNumbers.nextInt(6);

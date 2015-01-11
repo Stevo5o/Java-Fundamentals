@@ -5,10 +5,11 @@ import java.util.Scanner;
 /**
  * @author Stephen
  */
+public class MaximumFinder
+{
 
-public class MaximumFinder {
-
-   public static void main(String[] args) {
+   public static void main(String[] args)
+   {
 
       Scanner input = new Scanner(System.in);
 
@@ -24,17 +25,20 @@ public class MaximumFinder {
 
    }
 
-   private static double maximum(double x, double y, double z) {
+   private static double maximum(double x, double y, double z)
+   {
 
       double maximumValue = x;
 
-      if (y > maximumValue) {
+      if (y > maximumValue)
+      {
          maximumValue = y;
       }
 
-      if (z > maximumValue) {
+      if (z > maximumValue)
+      {
          maximumValue = z;
       }
-         return maximumValue;      
+      return maximumValue;
    }
 }

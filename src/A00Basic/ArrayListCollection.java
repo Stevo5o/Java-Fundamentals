@@ -5,9 +5,11 @@ import java.util.ArrayList;
 /**
  * @author Stephen
  */
-public class ArrayListCollection {
+public class ArrayListCollection
+{
 
-   public static void main(String[] args) {
+   public static void main(String[] args)
+   {
 
       // create a new ArrayList of Strings with an initial capacity of 10
       ArrayList<String> items = new ArrayList<String>();
@@ -20,7 +22,8 @@ public class ArrayListCollection {
               "Display list contents with counter-controlled loop:");
 
       // display the colors in the list
-      for(int i = 0; i < items.size(); i++) {
+      for (int i = 0; i < items.size(); i++)
+      {
          System.out.printf(" %s", items.get(i));
       }
 
@@ -47,12 +50,14 @@ public class ArrayListCollection {
    }
 
    // display the ArrayList's elemts on the console
-   public static void display(ArrayList<String> items, String header) {
-      
+   public static void display(ArrayList<String> items, String header)
+   {
+
       System.out.printf(header);
 
-      for (String item : items) {
-         System.out.printf(" %s", item);         
+      for (String item : items)
+      {
+         System.out.printf(" %s", item);
       }
       System.out.println();
    }

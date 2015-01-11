@@ -6,9 +6,11 @@ package A00Basic;
  */
 import java.util.Scanner;
 
-public class Addition {
+public class Addition
+{
 
-   public static void main(String[] args) {
+   public static void main(String[] args)
+   {
 
       Scanner input = new Scanner(System.in);
 
@@ -16,7 +18,6 @@ public class Addition {
       int number2; // second number
       int sum; // sum of first & second number
 
-      
       // Enter numbers 
       System.out.print("Enter first int: ");
       number1 = input.nextInt();
@@ -25,25 +26,31 @@ public class Addition {
       number2 = input.nextInt();
 
       // check numbers 
-      if (number1 == number2) {
+      if (number1 == number2)
+      {
          System.out.printf("%d == %d%n", number1, number2);
       }
-      if (number1 != number2) {
+      if (number1 != number2)
+      {
          System.out.printf("%d != %d%n", number1, number2);
       }
-      if (number1 < number2) {
+      if (number1 < number2)
+      {
          System.out.printf("%d < %d%n", number1, number2);
       }
-      if (number1 > number2) {
+      if (number1 > number2)
+      {
          System.out.printf("%d > %d%n", number1, number2);
       }
-      if (number1 <= number2) {
+      if (number1 <= number2)
+      {
          System.out.printf("%d <= %d%n", number1, number2);
       }
-      if (number1 >= number2) {
+      if (number1 >= number2)
+      {
          System.out.printf("%d == %d%n", number1, number2);
       }
-      
+
       // add number1 to number 2
       sum = number1 + number2;
 

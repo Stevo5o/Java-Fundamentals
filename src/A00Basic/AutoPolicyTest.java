@@ -3,9 +3,11 @@ package A00Basic;
 /**
  * @author Stephen
  */
-public class AutoPolicyTest {
+public class AutoPolicyTest
+{
 
-   public static void main(String[] args) {
+   public static void main(String[] args)
+   {
 
       // create new object
       AutoPolicy policy1 = new AutoPolicy(11111111, "Toyota Camry", "NJ");
@@ -16,14 +18,15 @@ public class AutoPolicyTest {
       policyInNoFaultState(policy2);
    }
 
-   public static void policyInNoFaultState(AutoPolicy policy) {
+   public static void policyInNoFaultState(AutoPolicy policy)
+   {
 
       System.out.println("The auto policy:");
       System.out.printf(
               "Account #: %d; Car: %s;%nState %s %s a no-fault state%n%n",
               policy.getAccountNumber(), policy.getMakeAndModel(),
               policy.getState(),
-              (policy.isNoFaultState() ? "is": "is not"));
+              (policy.isNoFaultState() ? "is" : "is not"));
 
    }
 
