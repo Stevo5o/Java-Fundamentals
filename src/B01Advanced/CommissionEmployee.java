@@ -10,16 +10,16 @@ package B01Advanced;
  * Keyword super for accessing superclass members
  * Constructors and inheritance hierarchies
  * Methods of a class Object
- * Ctrl Shift r - retangle selection
+ * Ctrl Shift r - rectangle selection
  */
 public class CommissionEmployee extends Object
 {
 
-   protected final String firstName;
-   protected final String lastName;
-   protected final String socialSecurityNumber;
-   protected double grossSales; // gross weekly sales
-   protected double commissionRate; // commisssion percentage
+   private final String firstName;
+   private final String lastName;
+   private final String socialSecurityNumber;
+   private double grossSales; // gross weekly sales
+   private double commissionRate; // commisssion percentage
 
    // five-argument constructor
    public CommissionEmployee(String firstName, String lastName,
@@ -104,7 +104,7 @@ public class CommissionEmployee extends Object
    // calculate earnings
    public double earnings()
    {
-      return commissionRate * grossSales;
+      return getCommissionRate() * getGrossSales();
    }
    
    // return String representation of CommissionEmployee object
@@ -112,9 +112,9 @@ public class CommissionEmployee extends Object
    public String toString()
    {
       return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f",
-              "commission employee", firstName, lastName,
-              "social security number", socialSecurityNumber,
-              "gross sales", grossSales,
-              "commission rate", commissionRate);
+              "commission employee", getFirstName(), getLastName(),
+              "social security number", getSocialSecurityNumber(),
+              "gross sales", getGrossSales(),
+              "commission rate", getCommissionRate());
    }
 } // end class CommissonEmployee
