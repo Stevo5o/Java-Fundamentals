@@ -12,16 +12,13 @@ package B01Advanced;
  * Methods of a class Object
  * BasePlusCommissionEmployee class represents an employee that receives
  * a base salary in addition to commission
+ * inheritance allows you to rapidly create new classes by
+ * basing them on preexisting classes
  *
  */
-public class BasePlusCommissionEmployee
+public class BasePlusCommissionEmployee extends CommissionEmployee
 {
 
-   private final String firstName;
-   private final String lastName;
-   private final String socialSecurityNumber;
-   private double grossSales; // gross weekly sales
-   private double commissionRate; // commisssion percentage
    private double baseSalary; // base salary per week
 
    // six-argument constructor
@@ -29,88 +26,20 @@ public class BasePlusCommissionEmployee
            String socialSecurityNumber, double grossSales,
            double commissionRate, double baseSalary)
    {
-      // implicit call to Object's default consructor occurs here
+      // explicit call to CommissionEmployee constructor occurs here
+      super(firstName, lastName, socialSecurityNumber,
+              grossSales, commissionRate);      
 
-      // if grossSales is invalid throw exceptio
-      if (grossSales < 0.0)
-      {
-         throw new IllegalArgumentException(
-                 "Gross Sales must be >= 0.0");
-      }     
-
-      // comissionRate is invalid throw exception
-      if (commissionRate <= 0.0 || commissionRate >= 1.0)
-      {
-         throw new IllegalArgumentException(
-                 "Commission rate must be > 0.0 and < 1.0");
-      }
-      
+      // if baseSalary is invalid throw exception
       if(baseSalary < 0.0)
       {
          throw new IllegalArgumentException(
          "Base salary must be >= 0.0");
       }
 
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.socialSecurityNumber = socialSecurityNumber;
-      this.grossSales = grossSales;
-      this.commissionRate = commissionRate;
       this.baseSalary = baseSalary;
    } // end constructor
 
-   // return first name
-   public String getFirstName()
-   {
-      return firstName;
-   }
-
-   // return last name
-   public String getLastName()
-   {
-      return lastName;
-   }
-
-   // return social security number
-   public String getSocialSecurityNumber()
-   {
-      return socialSecurityNumber;
-   }
-
-   // set gross sales amount
-   public void setGrossSales(double grossSales)
-   {
-      if(grossSales < 0.0)
-      {
-         throw new IllegalArgumentException(
-         "Gross sales must be >= 0.0");
-      }
-      this.grossSales = grossSales;
-   }
-   
-   // return gross sales amount
-   public double getGrossSales()
-   {
-      return grossSales;
-   }
-   
-   // set the commission rate
-   public void setCommissionRate(double commissionRate)
-   {
-      if (commissionRate <= 0.0 || commissionRate >= 1.0)
-      {
-         throw new IllegalArgumentException(
-         "Commisssion rate must be > 0.0 and < 1.0");
-      }      
-      this.commissionRate = commissionRate;
-   }
-   
-   // get commission rate
-   public double getCommissionRate()
-   {
-      return commissionRate;
-   }
-   
    // set base salary
    public void setBaseSalary(double baseSalary)
    {
@@ -130,6 +59,7 @@ public class BasePlusCommissionEmployee
    }
    
    // calculate earnings
+   @Override
    public double earnings()
    {
       return baseSalary + (commissionRate * grossSales);

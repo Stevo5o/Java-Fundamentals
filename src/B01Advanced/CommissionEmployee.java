@@ -10,16 +10,16 @@ package B01Advanced;
  * Keyword super for accessing superclass members
  * Constructors and inheritance hierarchies
  * Methods of a class Object
- *
+ * Ctrl Shift r - retangle selection
  */
 public class CommissionEmployee extends Object
 {
 
-   private final String firstName;
-   private final String lastName;
-   private final String socialSecurityNumber;
-   private double grossSales; // gross weekly sales
-   private double commissionRate; // commisssion percentage
+   protected final String firstName;
+   protected final String lastName;
+   protected final String socialSecurityNumber;
+   protected double grossSales; // gross weekly sales
+   protected double commissionRate; // commisssion percentage
 
    // five-argument constructor
    public CommissionEmployee(String firstName, String lastName,
