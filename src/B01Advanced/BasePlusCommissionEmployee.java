@@ -10,9 +10,11 @@ package B01Advanced;
  * Keyword super for accessing superclass members
  * Constructors and inheritance hierarchies
  * Methods of a class Object
+ * BasePlusCommissionEmployee class represents an employee that receives
+ * a base salary in addition to commission
  *
  */
-public class CommissionEmployee extends Object
+public class BasePlusCommissionEmployee
 {
 
    private final String firstName;
@@ -20,11 +22,12 @@ public class CommissionEmployee extends Object
    private final String socialSecurityNumber;
    private double grossSales; // gross weekly sales
    private double commissionRate; // commisssion percentage
+   private double baseSalary; // base salary per week
 
-   // five-argument constructor
-   public CommissionEmployee(String firstName, String lastName,
+   // six-argument constructor
+   public BasePlusCommissionEmployee(String firstName, String lastName,
            String socialSecurityNumber, double grossSales,
-           double commissionRate)
+           double commissionRate, double baseSalary)
    {
       // implicit call to Object's default consructor occurs here
 
@@ -41,12 +44,19 @@ public class CommissionEmployee extends Object
          throw new IllegalArgumentException(
                  "Commission rate must be > 0.0 and < 1.0");
       }
+      
+      if(baseSalary < 0.0)
+      {
+         throw new IllegalArgumentException(
+         "Base salary must be >= 0.0");
+      }
 
       this.firstName = firstName;
       this.lastName = lastName;
       this.socialSecurityNumber = socialSecurityNumber;
       this.grossSales = grossSales;
       this.commissionRate = commissionRate;
+      this.baseSalary = baseSalary;
    } // end constructor
 
    // return first name
@@ -101,20 +111,39 @@ public class CommissionEmployee extends Object
       return commissionRate;
    }
    
+   // set base salary
+   public void setBaseSalary(double baseSalary)
+   {
+      if(baseSalary < 0.0)
+      {
+         throw new IllegalArgumentException(
+         "Base salary must be >= 0.0");
+      }
+      
+      this.baseSalary = baseSalary;
+   }
+   
+   // return base salary
+   public double getBaseSalary()
+   {
+      return baseSalary;
+   }
+   
    // calculate earnings
    public double earnings()
    {
-      return commissionRate * grossSales;
+      return baseSalary + (commissionRate * grossSales);
    }
    
-   // return String representation of CommissionEmployee object
+   // return String representation of BasePlusCommissionEmployee object
    @Override // indicates that this method overrides a superclass method
    public String toString()
    {
-      return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f",
-              "commission employee", firstName, lastName,
+      return String.format(
+              "%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f",
+              "base-salaried commission employee", firstName, lastName,
               "social security number", socialSecurityNumber,
-              "gross sales", grossSales,
-              "commission rate", commissionRate);
+              "gross sales", grossSales, "commission rate", commissionRate,
+              "base salary", baseSalary);
    }
-} // end class CommissonEmployee
+} // end class BasePlusCommissonEmployee
