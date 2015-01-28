@@ -4,13 +4,12 @@ package B01Advanced;
  * @author Stephen
  * Polymorphism
  * Polymorphism concepts
- * Assigning superc
+ * Assigning superclass
  */
 public class PolymorphismTest
 {
    public static void main(String[] args) 
-   {
-      
+   {      
    
    // assign superclass reference to superclass var
    CommissionEmployee commissionEmployee = new CommissionEmployee(
