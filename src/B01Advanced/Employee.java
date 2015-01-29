@@ -13,11 +13,11 @@ public class Employee
    private Date hireDate;
 
    // constructor to intialise name, birth date and hire date
-   public Employee(String firstname, String lastname, Date birthDate,
+   public Employee(String firstName, String lastName, Date birthDate,
            Date hireDate)
    {
-      this.firstName = firstname;
-      this.lastName = lastname;
+      this.firstName = firstName;
+      this.lastName = lastName;
       this.birthDate = birthDate;
       this.hireDate = hireDate;
    }
