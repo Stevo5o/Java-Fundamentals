@@ -86,7 +86,7 @@ public class HourlyEmployee extends EmployeePayroll
    @Override
    public String toString()
    {
-      return String.format( "hourly employee: %s%n%s: $%,.2f, %s: %,.2f",
+      return String.format( "hourly employee: %s%n%s: $%,.2f; %s: %,.2f",
               super.toString(), "hourly salary", getWage(),
               "hours worked", getHours());
    }
