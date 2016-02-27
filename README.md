@@ -12,7 +12,7 @@
 :bread:
 ## having fun learning to program in java!
 
-### tools
+### tools :wrench:
 - mscode
 - Ubuntu
 - terminator
