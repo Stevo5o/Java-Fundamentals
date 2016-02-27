@@ -1,4 +1,4 @@
-package A00Basic;
+package basic;
 
 import java.security.SecureRandom;
 
