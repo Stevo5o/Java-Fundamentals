@@ -1,4 +1,4 @@
-# Java Fun :grey_exclamation:
+# Java Fun:exclamation:
 - Classes 
 - Arrays 
 - Stack 
@@ -9,7 +9,7 @@
 - Overload
 
 
-## :bread: having fun learning to program in java!
+## :bread: having fun learning to program in Java:grey_exclamation:
 
 ### tools :wrench:
 - mscode
