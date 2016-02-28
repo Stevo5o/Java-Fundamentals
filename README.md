@@ -1,4 +1,4 @@
-# java Fun!
+# Java Fun :grey_exclamation:
 - Classes 
 - Arrays 
 - Stack 

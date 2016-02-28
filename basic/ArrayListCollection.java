@@ -52,7 +52,6 @@ public class ArrayListCollection
    // display the ArrayList's elemts on the console
    public static void display(ArrayList<String> items, String header)
    {
-
       System.out.printf(header);
 
       for (String item : items)

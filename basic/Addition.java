@@ -1,11 +1,10 @@
 package basic;
 
-/**
- *
- * @author Stephen
- */
 import java.util.Scanner;
 
+/**
+ * @author theWhiteFox
+ */
 public class Addition
 {
 
@@ -57,5 +56,4 @@ public class Addition
       System.out.printf("Sum is %d%n", sum);
 
    }
-
 }
